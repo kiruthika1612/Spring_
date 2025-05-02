@@ -15,10 +15,12 @@ public class RoomService {
 		for (int i = 0; i < 10; i++) {
 			rooms.add(new Room(i, "Room " + i, "R" + i, "Q"));
 		}
+		//System.out.println(rooms);
 	}
 
 	public List<Room> getAllRooms() {
 		return rooms;
+
 	}
 
 }

@@ -52,4 +52,9 @@ public class Room {
 		this.info = info;
 	}
 
+	@Override
+	public String toString() {
+		return "Room [id=" + id + ", number=" + number + ", name=" + name + ", info=" + info + "]";
+	}
+
 }
