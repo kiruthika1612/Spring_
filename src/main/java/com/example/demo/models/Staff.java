@@ -1,7 +1,12 @@
 package com.example.demo.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Staff {
 
+	@Id
 	private int empID;
 	private String firstName;
 	private String lastName;

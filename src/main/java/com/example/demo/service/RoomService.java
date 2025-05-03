@@ -3,23 +3,20 @@ package com.example.demo.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.models.Room;
+import com.example.demo.repository.RoomRepository;
 
 @Service
 public class RoomService {
-	private static final List<Room> rooms = new ArrayList<>();
 
-	static {
-		for (int i = 0; i < 10; i++) {
-			rooms.add(new Room(i, "Room " + i, "R" + i, "Q"));
-		}
-		//System.out.println(rooms);
-	}
+	@Autowired
+	private RoomRepository roomRepository;
 
 	public List<Room> getAllRooms() {
-		return rooms;
+		return roomRepository.findAll();
 
 	}
 
